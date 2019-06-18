@@ -34,21 +34,25 @@
   return self;
 }
 
++ (void)setFormats:(NSArray<RNLBarCodeFormat> *)formats forScanner:(ZBarImageScanner *)scanner {
+    if ([formats count] > 0) {
+        // clear all symbol
+        [scanner setSymbology:ZBAR_NONE config:ZBAR_CFG_ENABLE to:0];
+        for (RNLBarCodeFormat format in formats) {
+            zbar_symbol_type_t symbol = [self convertFormatToSymbol:format];
+            if ((int)symbol != -1) {
+                [scanner setSymbology:symbol config:ZBAR_CFG_ENABLE to:1];
+            }
+        }
+    } else {
+        // set all symbol
+        [scanner setSymbology:ZBAR_NONE config:ZBAR_CFG_ENABLE to:1];
+    }
+}
+
 - (void)setFormats:(NSArray<RNLBarCodeFormat> *)formats
 {
-  if ([formats count] > 0) {
-      // clear all symbol
-      [_scanner setSymbology:ZBAR_NONE config:ZBAR_CFG_ENABLE to:0];
-      for (RNLBarCodeFormat format in formats) {
-          zbar_symbol_type_t symbol = [self convertFormatToSymbol:format];
-          if ((int)symbol != -1) {
-              [_scanner setSymbology:symbol config:ZBAR_CFG_ENABLE to:1];
-          }
-      }
-  } else {
-      // set all symbol
-      [_scanner setSymbology:ZBAR_NONE config:ZBAR_CFG_ENABLE to:1];
-  }
+    [RNLBarCodeDecoderZBar setFormats:formats forScanner:_scanner];
 }
 
 - (void)decodeCGImage:(CGImageRef)image withHandler:(void (^)(RNLBarCodeDecodeResult _Nullable, NSString * _Nullable))handler
@@ -66,7 +70,7 @@
     handler(nil, @"Not Found");
 }
 
-- (zbar_symbol_type_t)convertFormatToSymbol:(RNLBarCodeFormat)format
++ (zbar_symbol_type_t)convertFormatToSymbol:(RNLBarCodeFormat)format
 {
     if ([format isEqualToNumber:@2]) {
         return ZBAR_EAN2;

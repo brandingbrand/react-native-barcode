@@ -41,10 +41,18 @@ __IOS_AVAILABLE(VN_AVAILABLE_VERSION)
 
 @end
 
+@class ZBarImageScanner;
+
 /**
  * ZBar decoder wrapper
  */
 @interface RNLBarCodeDecoderZBar : NSObject<RNLBarCodeStillImageDecoder>
+
+/**
+ * add symbols to ZBarImageScanner
+ *
+ */
++  (void)setFormats:(NSArray<RNLBarCodeFormat> *)formats forScanner:(ZBarImageScanner *)scanner;
 
 @end
 

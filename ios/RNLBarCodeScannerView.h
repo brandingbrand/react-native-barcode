@@ -24,6 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nullable, nonatomic, copy) RCTDirectEventBlock onError;
 
+- (void)errorCallbackWithCode:(NSInteger)code andMessage:(NSString *)message;
+
 @end
 
 NS_ASSUME_NONNULL_END

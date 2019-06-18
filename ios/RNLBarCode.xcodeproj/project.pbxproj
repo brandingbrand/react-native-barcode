@@ -43,6 +43,8 @@
 		36C3FE982291A8C6009C6A1B /* config.c in Sources */ = {isa = PBXBuildFile; fileRef = 36C3FE7D2291A8C5009C6A1B /* config.c */; };
 		36C3FE992291A8C6009C6A1B /* img_scanner.c in Sources */ = {isa = PBXBuildFile; fileRef = 36C3FE7E2291A8C5009C6A1B /* img_scanner.c */; };
 		36C3FE9F2291AD54009C6A1B /* RNLBarCodeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C3FE9E2291AD54009C6A1B /* RNLBarCodeUtils.m */; };
+		3D26717D22B935230014EE4F /* RNLBarCodeScannerViewAVImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D26717C22B935230014EE4F /* RNLBarCodeScannerViewAVImplementation.m */; };
+		3D26718022B9361F0014EE4F /* RNLBarCodeScannerViewZBarImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D26717F22B9361F0014EE4F /* RNLBarCodeScannerViewZBarImplementation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +141,11 @@
 		36C3FE7F2291A8C5009C6A1B /* img_scanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = img_scanner.h; path = ../../third_party/ZBar/zbar/img_scanner.h; sourceTree = "<group>"; };
 		36C3FE9D2291AD45009C6A1B /* RNLBarCodeUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNLBarCodeUtils.h; sourceTree = "<group>"; };
 		36C3FE9E2291AD54009C6A1B /* RNLBarCodeUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNLBarCodeUtils.m; sourceTree = "<group>"; };
+		3D26717A22B9339D0014EE4F /* RNLBarCodeScannerViewImplementation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNLBarCodeScannerViewImplementation.h; sourceTree = "<group>"; };
+		3D26717B22B935230014EE4F /* RNLBarCodeScannerViewAVImplementation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNLBarCodeScannerViewAVImplementation.h; sourceTree = "<group>"; };
+		3D26717C22B935230014EE4F /* RNLBarCodeScannerViewAVImplementation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNLBarCodeScannerViewAVImplementation.m; sourceTree = "<group>"; };
+		3D26717E22B9361F0014EE4F /* RNLBarCodeScannerViewZBarImplementation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNLBarCodeScannerViewZBarImplementation.h; sourceTree = "<group>"; };
+		3D26717F22B9361F0014EE4F /* RNLBarCodeScannerViewZBarImplementation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNLBarCodeScannerViewZBarImplementation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +174,11 @@
 				36C3FE2E2291A840009C6A1B /* RNLBarCodeModule.m */,
 				36C3FE362291A841009C6A1B /* RNLBarCodeScannerView.h */,
 				36C3FE302291A840009C6A1B /* RNLBarCodeScannerView.m */,
+				3D26717A22B9339D0014EE4F /* RNLBarCodeScannerViewImplementation.h */,
+				3D26717B22B935230014EE4F /* RNLBarCodeScannerViewAVImplementation.h */,
+				3D26717C22B935230014EE4F /* RNLBarCodeScannerViewAVImplementation.m */,
+				3D26717E22B9361F0014EE4F /* RNLBarCodeScannerViewZBarImplementation.h */,
+				3D26717F22B9361F0014EE4F /* RNLBarCodeScannerViewZBarImplementation.m */,
 				36C3FE352291A841009C6A1B /* RNLBarCodeScannerViewManager.h */,
 				36C3FE2D2291A840009C6A1B /* RNLBarCodeScannerViewManager.m */,
 				36C3FE312291A840009C6A1B /* RNLBarCodeDecoder.h */,
@@ -333,9 +345,11 @@
 				36C3FE3B2291A841009C6A1B /* RNLBarCodeDecoderZBar.m in Sources */,
 				36C3FE372291A841009C6A1B /* RNLBarCodeScannerViewManager.m in Sources */,
 				36C3FE9F2291AD54009C6A1B /* RNLBarCodeUtils.m in Sources */,
+				3D26717D22B935230014EE4F /* RNLBarCodeScannerViewAVImplementation.m in Sources */,
 				36479FFA2293EBDE00E0CF16 /* RCTConvert+RNLBarCodeArguments.m in Sources */,
 				36C3FE3A2291A841009C6A1B /* RNLBarCodeDecoderAV.m in Sources */,
 				36C3FE382291A841009C6A1B /* RNLBarCodeModule.m in Sources */,
+				3D26718022B9361F0014EE4F /* RNLBarCodeScannerViewZBarImplementation.m in Sources */,
 				36C3FE392291A841009C6A1B /* RNLBarCodeScannerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
