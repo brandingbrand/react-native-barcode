@@ -67,7 +67,7 @@
 - (void) readerView: (ZBarReaderView*) view didReadSymbols: (ZBarSymbolSet*) syms fromImage: (UIImage*) img
 {
     for(ZBarSymbol *sym in syms) {
-        NSDictionary *result = @{@"format" : sym.typeName, @"content": sym.data};
+        NSDictionary *result = @{@"format" : @(sym.type), @"content": sym.data};
         if (self.parent.onResult) {
             self.parent.onResult(result);
         }
